@@ -40,6 +40,7 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -71,9 +72,25 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { useEffect } from "react";
+import { useI18n } from "@/lib/i18n";
+
+function TitleUpdater() {
+  const { lang } = useI18n();
+
+  useEffect(() => {
+    document.title = lang === "ru"
+      ? "Кирилл Куралов — 3D Motion Дизайнер"
+      : "Kirill Kuralov — 3D Motion Designer";
+  }, [lang]);
+
+  return null;
+}
+
 function RootComponent() {
   return (
     <I18nProvider>
+      <TitleUpdater />
       <Outlet />
     </I18nProvider>
   );

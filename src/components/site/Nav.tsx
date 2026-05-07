@@ -24,7 +24,7 @@ export function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between glass rounded-full px-5 py-3 backdrop-blur-xl">
         <a href="#top" className="font-display text-base font-semibold tracking-tight">
-          <span className="text-neon">●</span> Kirill Kuralov
+          <span className="text-neon">●</span> {t.nav.name}
         </a>
         <nav className="hidden items-center gap-7 md:flex">
           {links.map((l) => (

@@ -2,12 +2,19 @@ const items = [
   "Cinema 4D",
   "Redshift",
   "Blender",
+  "Unreal Engine",
+  "Unity",
   "After Effects",
-  "Octane",
-  "Houdini",
+  "Premiere Pro",
+  "Photoshop",
+  "Illustrator",
+  "Figma",
   "Stable Diffusion",
   "Midjourney",
   "Runway",
+  "Pika",
+  "Krea",
+  "NanoBanana",
 ];
 
 export function Marquee() {

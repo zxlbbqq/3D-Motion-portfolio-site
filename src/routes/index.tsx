@@ -12,7 +12,7 @@ import { Contact } from "@/components/site/Contact";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "3D Motion Designer — Portfolio" },
+      { title: "Kirill Kuralov — 3D Motion Designer — Portfolio" },
       {
         name: "description",
         content:
@@ -35,9 +35,9 @@ function Index() {
       <Hero />
       <Marquee />
       <About />
+      <Showreel />
       <Projects />
       <Skills />
-      <Showreel />
       <Experience />
       <Contact />
     </main>

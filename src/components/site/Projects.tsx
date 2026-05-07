@@ -1,12 +1,81 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
-import p4 from "@/assets/project-4.jpg";
-import p5 from "@/assets/project-5.jpg";
-import p6 from "@/assets/project-6.jpg";
+import blizkopreview from "@/assets/blizkopreview.png";
+import blizko from "@/assets/blizko.png";
+import Showreel2026preview from "@/assets/Showreel2026preview.png";
+import knotlor from "@/assets/knotlor.webp";
+import k1 from "@/assets/knotlor/1.jpg";
+import k2 from "@/assets/knotlor/2.png";
+import k3 from "@/assets/knotlor/3.png";
+import k4 from "@/assets/knotlor/4.png";
+import k5 from "@/assets/knotlor/5.png";
+import k6 from "@/assets/knotlor/6.png";
+import k7 from "@/assets/knotlor/7.png";
+import k8 from "@/assets/knotlor/8.jpg";
+import k9 from "@/assets/knotlor/9.jpg";
+import k10 from "@/assets/knotlor/10.png";
+import k11 from "@/assets/knotlor/11.png";
+import previewepica from "@/assets/previewepica.png";
+import aiavatars from "@/assets/aiavatars.png";
+import elista from "@/assets/elista.png";
+import ed0 from "@/assets/elista-documentation/ed0.jpg";
+import ed1 from "@/assets/elista-documentation/ed1.jpg";
+import ed2 from "@/assets/elista-documentation/ed2.jpg";
+import ed3 from "@/assets/elista-documentation/ed3.jpg";
+import ed4 from "@/assets/elista-documentation/ed4.jpg";
+import ed5 from "@/assets/elista-documentation/ed5.jpg";
+import ed6 from "@/assets/elista-documentation/ed6.jpg";
+import ed7 from "@/assets/elista-documentation/ed7.jpg";
+import ed8 from "@/assets/elista-documentation/ed8.jpg";
+import ed9 from "@/assets/elista-documentation/ed9.jpg";
+import ed10 from "@/assets/elista-documentation/ed10.jpg";
+import ed11 from "@/assets/elista-documentation/ed11.jpg";
+import ed12 from "@/assets/elista-documentation/ed12.jpg";
+import ed13 from "@/assets/elista-documentation/ed13.jpg";
+import ed14 from "@/assets/elista-documentation/ed14.jpg";
+import ed15 from "@/assets/elista-documentation/ed15.jpg";
+import ed16 from "@/assets/elista-documentation/ed16.jpg";
+import ed17 from "@/assets/elista-documentation/ed17.jpg";
+import ed18 from "@/assets/elista-documentation/ed18.jpg";
+import ed19 from "@/assets/elista-documentation/ed19.jpg";
+import ed20 from "@/assets/elista-documentation/ed20.jpg";
+import ed21 from "@/assets/elista-documentation/ed21.jpg";
+import eb0 from "@/assets/elista-brandbook/eb0.jpg";
+import eb1 from "@/assets/elista-brandbook/eb1.jpg";
+import eb2 from "@/assets/elista-brandbook/eb2.jpg";
+import eb3 from "@/assets/elista-brandbook/eb3.jpg";
+import eb4 from "@/assets/elista-brandbook/eb4.jpg";
+import eb5 from "@/assets/elista-brandbook/eb5.jpg";
+import eb6 from "@/assets/elista-brandbook/eb6.jpg";
+import eb7 from "@/assets/elista-brandbook/eb7.jpg";
+import eb8 from "@/assets/elista-brandbook/eb8.jpg";
+import eb9 from "@/assets/elista-brandbook/eb9.jpg";
+import eb10 from "@/assets/elista-brandbook/eb10.jpg";
+import eb11 from "@/assets/elista-brandbook/eb11.jpg";
+import eb12 from "@/assets/elista-brandbook/eb12.jpg";
+import eb13 from "@/assets/elista-brandbook/eb13.jpg";
+import eb14 from "@/assets/elista-brandbook/eb14.jpg";
+import eb15 from "@/assets/elista-brandbook/eb15.jpg";
+import eb16 from "@/assets/elista-brandbook/eb16.jpg";
+import eb17 from "@/assets/elista-brandbook/eb17.jpg";
+import eb18 from "@/assets/elista-brandbook/eb18.jpg";
+import eb19 from "@/assets/elista-brandbook/eb19.jpg";
+import eb20 from "@/assets/elista-brandbook/eb20.jpg";
+import eb21 from "@/assets/elista-brandbook/eb21.jpg";
+import eb22 from "@/assets/elista-brandbook/eb22.jpg";
+import eb23 from "@/assets/elista-brandbook/eb23.jpg";
+import eb24 from "@/assets/elista-brandbook/eb24.jpg";
+import eb25 from "@/assets/elista-brandbook/eb25.jpg";
+import eb26 from "@/assets/elista-brandbook/eb26.jpg";
+import eb27 from "@/assets/elista-brandbook/eb27.jpg";
+import eb28 from "@/assets/elista-brandbook/eb28.jpg";
+import eb29 from "@/assets/elista-brandbook/eb29.jpg";
+import eb30 from "@/assets/elista-brandbook/eb30.jpg";
+import eb31 from "@/assets/elista-brandbook/eb31.jpg";
+import eb32 from "@/assets/elista-brandbook/eb32.jpg";
+import eb33 from "@/assets/elista-brandbook/eb33.jpg";
+import eb34 from "@/assets/elista-brandbook/eb34.jpg";
 import { useI18n } from "@/lib/i18n";
 import { ProjectModal, type ProjectDetail } from "./ProjectModal";
 
@@ -14,93 +83,125 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const projects: (ProjectDetail & { span: string })[] = [
   {
-    img: p1,
-    gallery: [p1, p4, p2, p6],
-    title: "Liquid Chrome",
-    client: "Acme Tech",
+    img: Showreel2026preview,
+    gallery: [
+      { type: "video", src: "/videos/Showreel2026.mp4" },], 
+    title: "Showreel 2026",
+    client: "Kirill Kuralov",
+    year: "2026",
+    tags: ["3D", "Motion"],
+    span: "lg:col-span-7",
+    role: { ru: "Моушн-дизайнер", en: "Motion-designer" },
+    tools: ["Cinema 4D", "Redshift", "Blender", "After Effects", "Photoshop", "Gemini TTS"],
+    description: {
+      ru: "Шоурил 2026 — видеорассказ о себе и своём пути в 3D и motion-дизайне. Сделан с использованием Cinema 4D, Redshift, Blender и After Effects.",
+      en: "Showreel 2026 — a video story about myself and my journey in 3D and motion design. Made with Cinema 4D, Redshift, Blender and After Effects.",
+    },
+  },
+  {
+    img: aiavatars,
+    gallery: [
+      { type: "video", src: "/videos/aiavatars.mp4" },], 
+    title: "AI Avatars",
+    client: "SPbSUITD",
     year: "2025",
-    tags: ["3D", "CGI"],
-    span: "lg:col-span-7",
-    role: { ru: "3D / Look Dev / Анимация", en: "3D / Look Dev / Animation" },
-    tools: ["Cinema 4D", "Redshift", "After Effects"],
+    tags: ["AI", "Motion"],
+    span: "lg:col-span-5",
+    role: { ru: "AI Моушн-дизайнер", en: "AI Motion-designer" },
+    tools: ["HeyGen", "Gemini TTS", "Premiere Pro"],
     description: {
-      ru: "Серия CGI-визуалов с жидким хромом для запуска нового продукта Acme Tech. Исследовали поведение материала, отражения и динамику капель. Финальный ролик использовался в digital-кампании и наружной рекламе.",
-      en: "A CGI visual series with liquid chrome for the Acme Tech product launch. Explored material behaviour, reflections and droplet dynamics. The final piece was used across digital and OOH campaigns.",
+      ru: "Серия AI-аватаров с генеративной озвучкой для онлайн-курсов СПбГУПТД. Аватары сгенерированы через HeyGen, голос синтезирован через Gemini TTS, финальный монтаж в Premiere Pro.",
+      en: "A series of AI avatars with generative voiceover for SPbSUITD online courses. Avatars generated via HeyGen, voice synthesized with Gemini TTS, final edit in Premiere Pro.",
     },
   },
   {
-    img: p2,
-    gallery: [p2, p5, p1, p3],
-    title: "Neon Sculpt",
-    client: "Pulse Studio",
+    img: previewepica,
+    gallery: [],
+    layout: [
+      {
+        caption: { ru: "Голубая упаковка", en: "Blue packaging" },
+        align: "left",
+        wide: "/videos/1 Horizontal.mp4",
+        tall: "/videos/1 Vertical.mp4",
+      },
+      {
+        caption: { ru: "Лавандовая упаковка", en: "Lavender packaging" },
+        align: "right",
+        wide: "/videos/2 Horizontal.mp4",
+        tall: "/videos/2 Vertical.mp4",
+      },
+      {
+        caption: { ru: "Зелёная упаковка", en: "Green packaging" },
+        align: "left",
+        wide: "/videos/3 Horizontal.mp4",
+        tall: "/videos/3 Vertical.mp4",
+      },
+    ],
+    title: "Epica Visuals",
+    client: "Epica",
     year: "2025",
-    tags: ["Motion", "Brand"],
+    tags: ["3D", "Product"],
     span: "lg:col-span-5",
-    role: { ru: "Арт-дирекшн / Motion", en: "Art direction / Motion" },
-    tools: ["Cinema 4D", "Octane", "After Effects"],
+    role: { ru: "3D Motion-designer", en: "3D Моушн-дизайнер" },
+    tools: ["Blender",],
     description: {
-      ru: "Брендовая система абстрактных скульптур с неоновой подсветкой. Разработали 6 ключевых визуалов и набор лупов для соцсетей и сайта Pulse Studio.",
-      en: "A branded system of abstract sculptures with neon lighting. Built 6 key visuals and a loop pack for Pulse Studio's social and web presence.",
+      ru: "Серия продуктовых 3D-анимаций для йогуртов EPICA — тестовое задание, где каждый ролик — отдельная визуальная история: динамичная композиция, студийный свет и детальный рендер продукта. Формат адаптирован под соцсети — вертикаль и горизонталь.",
+      en: "A series of product 3D animations for EPICA yogurts — a test assignment where each video is a standalone visual story: dynamic composition, studio lighting and detailed product render. Formatted for social media — vertical and horizontal cuts.",
     },
   },
   {
-    img: p3,
-    gallery: [p3, p6, p2, p1],
-    title: "Silk Dreams",
-    client: "Maison Atelier",
+    img: knotlor,
+    gallery: [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11],
+    title: "Knotlor CGI",
+    client: "Knotlor",
     year: "2024",
-    tags: ["Fashion", "CGI"],
-    span: "lg:col-span-5",
-    role: { ru: "Симуляция ткани / Рендер", en: "Cloth sim / Rendering" },
-    tools: ["Houdini", "Redshift", "Nuke"],
-    description: {
-      ru: "Кампейн для fashion-бренда Maison Atelier: невесомая ткань, мягкий свет, монохром. Полностью CGI — от симуляции до композитинга.",
-      en: "Campaign for fashion brand Maison Atelier: weightless fabric, soft light, monochrome palette. Fully CGI — from sim to compositing.",
-    },
-  },
-  {
-    img: p4,
-    gallery: [p4, p1, p5, p6],
-    title: "Glass Object",
-    client: "Voltaic",
-    year: "2024",
-    tags: ["Product", "3D"],
+    tags: ["3D", "Product"],
     span: "lg:col-span-7",
-    role: { ru: "Продуктовая визуализация", en: "Product visualisation" },
-    tools: ["Cinema 4D", "Redshift"],
+    role: { ru: "3D-художник / 3D-дизайнер", en: "3D Artist / 3D Designer" },
+    tools: ["Cinema 4D", "Redshift", "Blender", "Photoshop"],
     description: {
-      ru: "Высокодетальная визуализация стеклянного объекта для лимитированной коллекции Voltaic. Фокус на дисперсии света, преломлении и фактуре поверхности.",
-      en: "High-detail visualisation of a glass object for a limited Voltaic collection. Focus on light dispersion, refraction and surface texture.",
+      ru: "Серия продуктовых визуализаций смесителей для бренда Knotlor. Фокус на материалах, отражениях и студийном освещении — каждый рендер передаёт качество и характер продукта.",
+      en: "A series of product visualisations for Knotlor faucets. Focus on materials, reflections and studio lighting — each render conveys the quality and character of the product.",
     },
   },
   {
-    img: p5,
-    gallery: [p5, p2, p4, p3],
-    title: "Particle Field",
-    client: "Orbit Labs",
-    year: "2024",
-    tags: ["Motion", "Generative"],
-    span: "lg:col-span-7",
-    role: { ru: "Генеративный motion", en: "Generative motion" },
-    tools: ["Houdini", "TouchDesigner", "After Effects"],
-    description: {
-      ru: "Генеративная система частиц для презентации продукта Orbit Labs. Поведение частиц реагирует на аудио — для живых выступлений собрали интерактивную версию в TouchDesigner.",
-      en: "A generative particle system for an Orbit Labs product reveal. Particles react to audio — a TouchDesigner interactive build was used for live performances.",
-    },
-  },
-  {
-    img: p6,
-    gallery: [p6, p3, p1, p5],
-    title: "Golden Splash",
-    client: "Aurum",
+    img: blizkopreview,
+    gallery: [blizko],
+    title: "Exhibition Space Website",
+    client: "Blizko",
     year: "2023",
-    tags: ["Branding", "CGI"],
-    span: "lg:col-span-5",
-    role: { ru: "Симуляция жидкости / Рендер", en: "Fluid sim / Rendering" },
-    tools: ["Houdini", "Redshift", "Photoshop"],
+    tags: ["UX/UI", "Website"],
+    span: "lg:col-span-7",
+    role: { ru: "Проектный-менеджер / Исследователь", en: "Project-manager / Researcher" },
+    tools: ["Figma", "Photoshop", "Illustrator"],
     description: {
-      ru: "Серия кадров с золотыми всплесками для ребрендинга Aurum. Симуляции жидкости с кастомными шейдерами и студийным светом.",
-      en: "A series of golden splash shots for the Aurum rebrand. Fluid simulations paired with custom shaders and studio lighting.",
+      ru: "Концептуальный сайт для выставочного пространства BLIZKO, созданный с акцентом на атмосферу, визуальную подачу и удобную навигацию. Проект помогает представить пространство как современную культурную площадку и делает акцент на событиях, афише и имиджевом восприятии бренда.",
+      en: "A concept website for the BLIZKO exhibition space, designed with a focus on atmosphere, visual presentation, and intuitive navigation. The project presents the space as a modern cultural venue and highlights events, programming, and the brand’s overall image.",
+    },
+  },
+    {
+    img: elista,
+    gallery: [],
+     sliders: [
+      {
+        title: "Брендбук",
+        items: [eb0, eb1, eb2, eb3, eb4, eb5, eb6, eb7, eb8, eb9, eb10, eb11, eb12, eb13, eb14, eb15, eb16, eb17, eb18, eb19, eb20, eb21, eb22, eb23, eb24, eb25, eb26, eb27, eb28, eb29, eb30, eb31, eb32, eb33, eb34],
+      },
+      {
+        title: "Документация",
+        items: [ed0, ed1, ed2, ed3, ed4, ed5, ed6, ed7, ed8, ed9, ed10, ed11, ed12, ed13, ed14, ed15, ed16, ed17, ed18, ed19, ed20, ed21],
+      },
+    ],
+    title: "Elista Identity",
+    client: "Elista",
+    year: "2024",
+    tags: ["UX/UI", "Branding"],
+    span: "lg:col-span-5",
+    role: { ru: "Проектный-менеджер / Исследователь", en: "Project-manager / Researcher" },
+    tools: ["Figma", "Photoshop", "Illustrator"],
+    description: {
+      ru: "Комплексный UX/UI и брендинг проект — мобильное приложение для вовлечения жителей в развитие города и полная айдентика Элисты. От персон и wireframes до UI-кита, брендбука и системы носителей.",
+      en: "A full-scale UX/UI and branding project — a civic engagement mobile app for city residents alongside a complete visual identity for Elista. From personas and wireframes to UI kit, brand book, and carrier system.",
     },
   },
 ];
@@ -150,7 +251,7 @@ export function Projects() {
                   loading="lazy"
                   width={1280}
                   height={1280}
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
               </div>
 

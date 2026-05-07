@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 import { useI18n } from "@/lib/i18n";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -8,18 +7,15 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export function Hero() {
   const { t } = useI18n();
   return (
-    <section id="top" className="relative flex min-h-[88vh] items-end overflow-hidden pb-16 pt-20 md:pb-20 md:pt-24">
-      <div className="absolute inset-0 -z-10">
-        <img src={heroBg} alt="" className="h-full w-full object-cover opacity-50" width={1920} height={1088} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-      </div>
-
-      <div className="absolute inset-0 -z-10 opacity-[0.04]" style={{
-        backgroundImage:
-          "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-        backgroundSize: "80px 80px",
-      }} />
+    <section id="top" className="relative flex min-h-[57vh] items-end overflow-hidden pb-16 md:pb-20">
+      <div
+        className="absolute inset-0 -z-10 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+        }}
+      />
 
       <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
         <motion.div
