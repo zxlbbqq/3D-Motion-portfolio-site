@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export function Hero() {
   const { t } = useI18n();
   return (
-    <section id="top" className="relative flex min-h-[57vh] items-end overflow-hidden pb-16 md:pb-20">
+    <section id="top" className="relative flex min-h-[57vh] items-end overflow-hidden pb-16 pt-20 md:pb-20 md:pt-24">
       <div
         className="absolute inset-0 -z-10 opacity-[0.04]"
         style={{
