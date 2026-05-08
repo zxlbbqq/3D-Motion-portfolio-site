@@ -261,7 +261,7 @@ export function Projects() {
                 <div>
                   <div className="mb-2 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                     {p.tags.map((tag) => (
-                      <span key={tag} className="rounded-full border border-border px-2 py-0.5">
+                      <span key={tag} className="rounded-full border border-border px-2 py-0.5 bg-background/60 backdrop-blur-sm">
                         {tag}
                       </span>
                     ))}
